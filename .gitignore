@@ -31,3 +31,6 @@
 /.nb-gradle/
 
 /out/
+*sphinx docuementation
+Documentation/restructured/locale/pl/LC_MESSAGES/*.mo
+Documentation/restructured/_build/
