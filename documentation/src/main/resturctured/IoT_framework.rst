@@ -4,7 +4,7 @@ Tigase IoT Framework
 Overview
 ---------
 
-.. figure:: ../../asciidoc/images/hardware.jpg
+.. figure:: ../asciidoc/images/hardware.jpg
    :alt: Example project
 
    Figure 1. Example project
@@ -366,7 +366,7 @@ Constructor of an ``AbstractSensor`` class requires in a parameter a type of a d
 
 **Example (support for a PIR sensor - HC SR501).**
 
-.. literalinclude:: ../../../../../devices-rpi/src/main/java/tigase/iot/framework/rpi/sensors/pir/HC_SR501.java
+.. literalinclude:: ../../../../devices-rpi/src/main/java/tigase/iot/framework/rpi/sensors/pir/HC_SR501.java
 
 
 New sensor with periodical reads
@@ -390,7 +390,7 @@ Constructor of an ``AbstractSensor`` class requires in a parameter a type of a d
 
 **Example (support for I2C sensor - BH1750).**
 
-.. literalinclude:: ../../../../../devices-rpi/src/main/java/tigase/iot/framework/rpi/sensors/light/BH1750.java
+.. literalinclude:: ../../../../devices-rpi/src/main/java/tigase/iot/framework/rpi/sensors/light/BH1750.java
 
 New device
 ^^^^^^^^^^^
@@ -693,4 +693,4 @@ A properly set up network on a Raspbbery Pi device with working connectivity to 
 .. [1]
    Application which is based on Tigase IoT Framework and connects (creates bridge) IoT unaware sensors and allows them to access XMPP network
 
-.. image:: ../../asciidoc/images/hardware.jpg
+.. image:: ../asciidoc/images/hardware.jpg
