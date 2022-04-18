@@ -1,0 +1,2529 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2004-2022, Tigase, Inc
+# This file is distributed under the same license as the TigaseDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: TigaseDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-18 13:53-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../IoT_one_cloud_hub_documentation.rst:2
+msgid "Tigase IoT One Cloud Hub Documentation"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:5
+msgid "Welcome!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:6
+msgid "Welcome to the documentation for IoT One Cloud from Tigase!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:9
+msgid "What is it?"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:11
+msgid ""
+"Tigase IoT One is a system designed to bring the Internet of Things into "
+"your home securely, quickly, and to devices you may never have thought "
+"possible! It is based of of Tigase’s open source software, and provides "
+"an open easy-to-program interface for adding your own devices to the IoT "
+"one Cloud network. Devices can be added and removed with a few taps, with"
+" one password for anything you add. The software allows for unlimited use"
+" on a local network, and provides multiple methods for you to do it on a "
+"remote network. To find out more, read on!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:14
+msgid "XMPP?"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:16
+msgid ""
+"Tigase IoT One Cloud uses XMPP for transmission of data between client "
+"and the IoT hub. XMPP stands for eXtensible Messaging and Presence "
+"Protocol, an evolution of the Jabber platform. It is an Open source "
+"standard recognized by the IETF under publications `RFC 3920 "
+"<https://xmpp.org/rfcs/rfc3920.html>`__ and `3921 "
+"<https://xmpp.org/rfcs/rfc3921.html>`__. XMPP is an excellent real-time "
+"communication platform with a proven track record in a wide variety of "
+"industries. As a natural extension of the way XMPP works, communication "
+"to your IoT devices connected with this system are improved thanks to a "
+"level of abstraction. Unlike most IoT solutions where a client connects "
+"to a host program on a device directly, IoT One Cloud uses a modified "
+"XMPP server to stand in between and deliver only properly formatted "
+"commands and packets to and from the devices, ensuring security from "
+"rogue program injections."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:19
+msgid "Who is this for?"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:21
+msgid ""
+"We have designed IoT One Cloud for the maker, the tinkerer, for somebody "
+"who does not want to spend hours programming and would rather just add "
+"devices by plugging them in and using a few taps on the client. Of course"
+" this doesn’t mean that you can’t program your own devices - far from it."
+" We’ve even included methods to write your own drivers and some examples "
+"if you wanted too. However our focus is to make IoT easy and simple for "
+"you."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:24
+msgid "What makes up the software"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:26
+msgid ""
+"The IoT One Cloud Product is made up of a few components; the Hub, the "
+"Framework, and a Client. The Hub is a modified XMPP server that handles "
+"the traffic between the framework and the client. It also serves as the "
+"point of access if you are outside a local network. The Framework "
+"connects data from the Raspberry Pi GPIO pins to the XMPP network, "
+"allowing the flow of data to and from the GPIO pins to the Hub. The "
+"Client is how you will see data, add and remove devices, and generally "
+"control the devices connected to the Framework."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:28
+msgid ""
+"Optionally, there is the IoT One Cloud Server, which allows a client to "
+"connect to the Hub from outside a local network, truly making the product"
+" accessible from any internet connection."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:31
+msgid "Requirements"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:33
+msgid ""
+"To get started you will need the following: - A Raspberry Pi, model 2, "
+"3+, or 0W. We recommend the model 3+ for the best experience. - A power "
+"source capable of running the Pi and devices, we highly recommend at "
+"least a 2.0A AC adapter. - A MicroSD card to store operating system and "
+"software on it. - A method of setting up the Raspberry Pi, like SSH, or "
+"directly with a keyboard. - A few devices you want to control. - About 30"
+" minutes of time for initial setup."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:36
+msgid "Beta"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:38
+msgid ""
+"Note that this software package is currently in Beta. We highly recommend"
+" you sign up at tigase.tech and subscribe to our redmine page to share "
+"bug reports, suggestions, and help make this product better. Please keep "
+"in mind that some errors might occur, and everything may not work as "
+"planned. You are operating this software at your own risk and we cannot "
+"take guarantee the absence of crashes, and issues. We offer no guarantee "
+"of stability, functionality, or safety of the programming. Please "
+"understand that this is being worked on currently, and although we only "
+"support a small number of devices, more will grow as we work with the "
+"software."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:40
+msgid ""
+"We appreciate your participation in the beta program by sharing bug "
+"reports, or other helpful information through our redmine."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:43
+msgid "Basics of Circuit Building"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:45
+msgid ""
+"Working with Iot One Cloud from Tigase will require you to build circuits"
+" in order to add devices. However, without a basic understanding of "
+"electricity and circuits, this may become cumbersome. So before we start "
+"working with LEDs, sensors and devices let’s go over the basics of "
+"constructing circuits and analysis."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:48
+msgid "Safety"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:50
+msgid ""
+"One thing to keep in mind is that you will be working with electricity. "
+"It is imperative that you take caution while connecting devices and "
+"wires! - Ensure that any devices you plug in are unplugged before you "
+"change circuits. - Be sure there are no open circuits. - Exercise caution"
+" when working with capacitors. - Do not get prototype boards, or devices "
+"wet."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:53
+msgid "What is a circuit?"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:55
+msgid ""
+"An electronic circuit is simply a path for electron flow. It must consist"
+" of a source of power, and someplace for that power to go. If there is a "
+"gap in that circuit, it’s considered an open circuit and electron flow "
+"cannot happen. We will use the positive flow model which will show "
+"electron flow from Positive(+) to Negative(-). Also keep in mind that we "
+"will generally be dealing with DC or Direct Current. This means that the "
+"positive and negative sides of a circuit are discreet and do not change "
+"(where as an Alternating Current circuit flips back and forth). This mean"
+" the polarity (whether a connection is positive or negative) is "
+"especially important while building or diagnosing circuits."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:57
+msgid "To illustrate this, take a look at the following images."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:59
+msgid "|An open circuit|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:248
+msgid "An open circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:61
+msgid ""
+"This image shows an open circuit. Without a path for electron flow, the "
+"light does not illuminate. The open section can be considered a switch "
+"which will close and allow flow."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:63
+msgid "|A closed circuit|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:249
+msgid "A closed circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:65
+msgid ""
+"The light is now lit that the path is closed all the way around. This is "
+"now considered a closed circuit, electron flow can finish the path from "
+"positive to negative."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:68
+msgid "Units"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:70
+msgid ""
+"When talking about electricity, sometimes the simplest analogy is "
+"thinking of water moving through a hose. It may not seem to be the most "
+"obvious comparison, but it’s the easiest way to explain what each these "
+"units mean."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:73
+msgid "Volts"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:75
+msgid ""
+"Firstly we have Voltage, this is how many Volts a circuit is running "
+"with. Most of our applications use 3.3 or 5V, which on the grand scale of"
+" things is not much. Think of volts as the amount of water pressure in "
+"the hose, a higher voltage means more pressure."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:79
+msgid "Amperage"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:81
+msgid ""
+"Next is Amperage, this unit measures the amount of current flowing "
+"through the circuit. In the same way, it is the amount of water flow "
+"through the hose. Higher currents, or flow, means a higher Amperage. The "
+"Raspberry Pi requires at least 500mA (milliamps), or .5A (amps)."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:84
+msgid "Resistance"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:86
+msgid ""
+"Finally is resistance, which as it’s name implies, is how much resistance"
+" to electron flow there is in a circuit. Think of this as kinks in the "
+"hose. If you’re thinking that a kink in a hose results in an increase in "
+"flow, the same rings true in an electric circuit. Resistance is measured "
+"in Ohms (Omega)."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:88
+msgid ""
+"These three units are all you will need to know in order to build "
+"circuits with IoT One Cloud!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:91
+msgid "Components"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:93
+msgid ""
+"Each electrical circuit consists of different components that will do "
+"various things to electron flow, or use it to create some result. "
+"Although many devices may already be on a board with necessary "
+"components, you may find you wish to experiment more with different "
+"devices and components, each with it’s own requirements. To prepare you "
+"for this, lets go over some of the basic components available to get you "
+"better ready for the vast options out there."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:96
+msgid "Resistors"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:98
+msgid ""
+"Resistors are essentially the kinks in the hose as described above, they "
+"provide electrical resistance from one end to the next. Resistors "
+"generally do not have a polarity, so it does not matter which way they "
+"are pugged in. There are many different types of resistors, but they "
+"essentially operate the same."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:100
+msgid ""
+"Resistors are marked with a value that indicates how much resistance it "
+"can provide. Some like ceramic disk resistors will have it written on it "
+"directly, while barrel type resistors use a color code to indicate the "
+"value."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:102
+msgid "|Color code chart from|\\ http://www.resistorguide.com"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:250
+msgid "Color code chart from"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:104
+msgid ""
+"The chart might look a little intimidating, but don’t worry it’s fairly "
+"easy to use. To read the resistance, you will need to read from left to "
+"right. Although these types of resistors do not indicate which direction "
+"they should be read, there is a gap between the bands that places at the "
+"most two on one side, that should be on the right where 3 or 4 bands "
+"should be on the left. Once you have that, you can start to read the "
+"bands. Sometimes it helps to have a pencil handy. The first 2 bands are "
+"just digits, so you can write them down based on the color code. If you "
+"have a 3 or 4 band resistor, the 3rd band will be a multiplier which "
+"multiples the two digits you wrote down. A 4 band resistor will have the "
+"last band reserved for tolerance levels, which will say how close to the "
+"printed value the resistor should be. The lower the tolerance, the more "
+"exact the resistance value should be."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:106
+msgid ""
+"For 5 and 6 band resistors, the first three bands are digits, and the 4th"
+" is reserved for the multiplier. The 5th band is reserved for tolerances,"
+" just like the 4th band on 4 band resistors. Lastly, 6 band resistors "
+"have a Temperature Coefficient value, which lets you know how much the "
+"resistance will change during temperature changes. In all likelihood you "
+"will not encounter these resistors or need this particular value for our "
+"projects."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:108
+msgid "On a circuit diagram they are represented by these symbols:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:110
+msgid "|Resistor symbols|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:251
+msgid "Resistor symbols"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:113
+msgid "Capacitors"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:115
+msgid ""
+"Capacitors allow for the buildup of electrical potential, and then "
+"release it when it gets to a set amount. Capacitors can be fixed, in that"
+" their capacitance is fixed to a certain number, or variable which can "
+"change depending on inputs or physical changes. These are generally "
+"polarized, in that it’s important to pay attention to which side goes "
+"into a circuit."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:117
+msgid "Capacitors are generally marked on the outside what their values are."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:119
+msgid "On a circuit diagram, these are the symbols you will see."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:121
+msgid "|Capacitor symbols|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:252
+msgid "Capacitor symbols"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:124
+msgid "Integrated Circuits (ICs)"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:126
+msgid ""
+"Integrated circuits are what you might think of when you hear the word "
+"computer chip. These small black rectangles can perform a variety of "
+"tasks depending on their construction. We won’t cover how they work "
+"exactly, but there’s a few key things to keep in mind. First, orientation"
+" is important. One end of the IC will have a dot, or a small half circle "
+"cut out of the plastic material. This indicates the top of the chip, and "
+"where you should start numbering your pins. Most ICs come in what’s "
+"called a Dual Inline Package, or DIP. The idea is that there’s two rows "
+"of pins on either side of the IC. To number the pins, start with the IC "
+"oriented with the dot or circle at the top, and start at the top left "
+"pin. This is Pin 1, then go down the left side, and then up the right. "
+"This can help you identify which pins go where since in a circuit "
+"diagram, they may not always be represented the same. Take the below "
+"image for example:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:128
+msgid "|741 OpAmp|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:253
+msgid "741 OpAmp"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:130
+msgid ""
+"The circuit diagram symbol looks nothing like the IC, but the pins are "
+"numbered so you can follow where they are wired!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:133
+msgid "LEDs"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:135
+msgid ""
+"Light Emitting Diodes have become a popular method of lighting in recent "
+"years, and are a common source of illumination in the maker sphere. "
+"Whether they are indicators, counters, or just power lights. LEDs are "
+"polarized in that electricity can only flow in one direction, this is "
+"essentially what a diode does, but in an LEDs case, they give off light "
+"as well. When connecting LEds, they might light when connected between "
+"power and ground, but it’s not suggested to do this. Since LEDs do not "
+"regulate voltage, the diode will pass any voltages through itself and "
+"sometimes this can damage an LED. It is recommended you use a small "
+"resistor, like a 1k in series when you connect an LED to protect it from "
+"burning out (see what series wiring means in the next section). You will "
+"also notice that LEDs have a longer and a shorter leg coming from them. "
+"The longer leg is the anode, and the shorter is the cathode, which means "
+"the anode should be connected to the positive side, and the cathode to "
+"the negative side. The circuit diagram symbol is below:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:137
+msgid "|LED symbol|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:254
+msgid "LED symbol"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:139
+msgid ""
+"Note that the triangle points to the right, to help indicate the "
+"direction of electron flow."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:142
+msgid "Series wiring vs Parallel wiring"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:144
+msgid ""
+"There are two different types of wiring you should be familiar with "
+"before building circuits, series wiring, and parallel wiring. They both "
+"have different effects on the unit values of a circuit, and they can be "
+"employed to do different things. The below example is one of series "
+"wiring, where two lamps are wired in series, one after the other. In this"
+" example a switch is placed after both lamps, and when the switch is "
+"closed, both lamps will be lit at the same time."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:146
+msgid "|A series circuit|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:255
+msgid "A series circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:148
+msgid ""
+"Parallel is when two or more paths are available for electron flow as in "
+"the following example:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:150
+msgid "|A parallel circuit|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:256
+msgid "A parallel circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:152
+msgid ""
+"Here electron flow will always go through Lamp 2 as long as power is "
+"being applied. Electron flow will only go through Lamp 1 and light it "
+"when the switch next to it is closed. This could be used for example to "
+"use the lights as indicators: when power is being applied, and when the "
+"switch is closed."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:154
+msgid ""
+"Remember that like water, electricity will always go in the path of least"
+" resistance, so if you were to put a large resistor in front of one of "
+"the lamps, it will effect the behavior of the circuit."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:156
+msgid "|A resistor changes things|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:257
+msgid "A resistor changes things"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:158
+msgid ""
+"Now, Lamp 1 will be lit when the switch is closed, just like before. But "
+"because there is a resistor in front of Lamp 2, it may be dim or go out "
+"when Lamp 1 is lit (depending on the value of the resistance). How will "
+"we know when if light will go out entirely? We can calculate how large of"
+" a resistor we need!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:161
+msgid "Calculating circuit values"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:163
+msgid ""
+"One thing you may need to do is calculate what components you might need "
+"to make a circuit work."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:165
+msgid ""
+"The one formula you will need to remember is Ohm’s Law is E=I/R where E ="
+" electromagnative force (voltage), I = current (amps), and R = Resistance"
+" (ohms). You can of course move these variables around if you need to "
+"calculate I or R of the circuit: I = E/R R = I/E"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:167
+msgid ""
+"There are some basic principals to constructing a circuit you will need "
+"to follow, and depending on which type of circuit you are making, the "
+"rules are slightly different. Here are the basics of each circuit type."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:170
+msgid "Rules for Series Circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:172
+msgid "If there is an open part of the circuit, no current will flow."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:174
+msgid "Each part of a series circuit has the same current, or amperage."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:176
+msgid ""
+"The total resistance of a series circuit is the sum of each individual "
+"resistor."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:178
+msgid "Voltage of the circuit is equal to the sum of all voltage drops."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:180
+msgid ""
+"Voltage drop across a resistor component is proportional to the size of "
+"the resistor."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:183
+msgid "Rules for Parallel Circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:185
+msgid ""
+"If there is an open part of the circuit, current will flow in the "
+"remaining parallel paths."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:187
+msgid "Each part of a parallel circuit has the same voltage."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:189
+msgid ""
+"The total current of a parallel circuit is the sum of each individual "
+"current between components."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:191
+msgid ""
+"Total Resistance is calculated using the following formula: 1/Rt = 1/R1 +"
+" 1/R2 + 1/R3…​ This means that the total resistance of a circuit gets "
+"smaller with each resistor."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:193
+msgid ""
+"What does all this mean? Well, lets take a circuit and calculate some "
+"numbers"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:196
+msgid "Calculations in a Series Circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:198
+msgid ""
+"The below circuit has two resistors, R1 and R2, each with a resistance of"
+" 10 ohms with a 12v power source. If we wanted to know what the voltage "
+"is after each resistor, or what the voltage drop is, we can calculate it."
+" |Series1|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:258
+msgid "Series1"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:200
+msgid ""
+"Our total resistance, by the rules stated above in a series circuit is 20"
+" ohms (R1+R2=R). Now we have the E and I of ohms law, we can get the "
+"total amperage. I=V/R I = 12/20 I = 0.6 Amps"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:202
+msgid ""
+"Now that we know the totals of all the circuits, we can calculate the "
+"voltage drop after each resistor, which we will call V1 and V2. V1 = 0.6A"
+" x 10 Ohms = 6V V2 = 0.6A x 10 Ohms = 6V"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:204
+msgid ""
+"This is important because if you had a component that needed 10V to "
+"function, it would not after one of these resistors. Lets see what "
+"happens when we change R2 to a larger resistor. |Series2|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:259
+msgid "Series2"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:206
+msgid ""
+"We will need to calculate the total resistance again, which in this case "
+"is 15 ohms (R1+R2=R). Our total amperage will be different as well. I=V/R"
+" I = 12/210 I = 0.057 Amps"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:208
+msgid ""
+"Now for the voltage drops V1 = 0.057A x 10 Ohms = .5V V2 = 0.057A x 210 "
+"Ohms = 11.97 V"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:211
+msgid "Calculations in a Parallel Circuit"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:213
+msgid ""
+"This parallel circuit has 3 resistors, R1, R2, and R3 with different "
+"resistances labeled. We still have a 12v power source. |Parallel1|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:260
+msgid "Parallel1"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:215
+msgid ""
+"How do we know what current will be on the other side of the resistors? "
+"Note that some components can impart some resistance, and may act the "
+"same."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:217
+msgid "First we need to calculate the total resistance of the circuit."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:219
+msgid "1/Rt = 1/10 + 1/210 + 1/5 1/Rt = 0.1 + 0.005 + 0.2 1/Rt = .305 Rt = 3.28Ω"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:221
+msgid ""
+"Since we know what the voltage is across all components, since this is a "
+"12V parallel circuit, we can now calculate the circuit total amperage."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:223
+msgid "I = E/R"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:225
+msgid "12V / 3.28Ω = 3.67A"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:227
+msgid ""
+"Now we have the total current, we can find out what it is flowing to each"
+" component:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:229
+msgid "I1 = 12V / 10Ω = 1.2A I2 = 12V / 210Ω = .057A I3 = 12V / 5Ω = 2.4A"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:231
+msgid ""
+"Because we are rounding our figures, I1+I2+I3 is not exactly It, but this"
+" is okay since this is well with tolerance levels of devices and "
+"components. Lets say now that we have a device that needs 5A to run "
+"correctly and we will connect it behind R3, how can you do this?"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:233
+msgid ""
+"We can work backwards. Remember we only need three variables, and we have"
+" two!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:235
+msgid "R = 5/12 R = .416"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:237
+msgid ""
+"Of course this would be an expensive and hard to find resistor, but you "
+"can see how we can calculate what we need."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:240
+msgid "Breadboards & Prototyping"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:242
+msgid ""
+"When making our circuits, we’ll be using breadboards to make working with"
+" circuits easy. Here are some considerations to keep in mind while "
+"working with them."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:244
+msgid "|Breadboard|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:261
+msgid "Breadboard"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:246
+msgid ""
+"As this image shows, the two rows on either side of the breadboard "
+"vertically, traditionally used for Positive voltage and Ground are "
+"connected vertically. The center holes are connected horizontally, but "
+"only for the first 5 holes. The center separates connectivity so DIP ICs "
+"can be plugged in down the center. Anything plugged into the adjacent "
+"holes will be connected to the pin."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:264
+msgid "Raspberry Pi Pinouts"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:266
+msgid ""
+"Before we setup the Pi and get software installed, it’s a good idea to "
+"take a look and familiarize yourself with the location and orientation of"
+" the GPIO pins and components. Take a look at the images here:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:268
+msgid "|Raspberry Pi v3| |Raspberry Pi 0w|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:278
+msgid "Raspberry Pi v3"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:279
+msgid "Raspberry Pi 0w"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:270
+msgid ""
+"Please note the orientation of the boards, the GPIO pins should be on the"
+" right of the board. The Top left pin is Pin 1. With this orientation in "
+"place, you can now reference the below image:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:272
+msgid "|PiPinout|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:280
+msgid "PiPinout"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:274
+msgid ""
+"The numbers in the center represent the physical GPIO pins on the "
+"Raspberry Pi. The next set on either side represents BCM, these are the "
+"numbers associated with the breakout module, and other devices that use "
+"the BCM numbering system. Lastly is WiringPi, which assigns different "
+"numbers to these pins. Depending on the device, you will be asked for a "
+"BCM, WiringPi, or a GPIO pin so it is important to familiarize yourself "
+"with each of these numbering systems."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:276
+msgid ""
+"If you have a device plugged into BCM 17, it also functions as WiringPi "
+"pin 0, and GPIO pin 11."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:283
+msgid "Setting Up the Raspberry Pi"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:285
+msgid ""
+"IoT One Cloud runs on almost any linux build, however to make things easy"
+" and have a lower footprint on memory, we are going to go with Raspbian "
+"Stretch Lite. This will require us to install some necessary software, "
+"but this is the operating system we have spent the most time working and "
+"developing with. Other guides will be made available as we expand. You "
+"can get the image of Raspbian Stretch Lite from `here "
+"<https://etcher.io/>`__ as a zip file."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:288
+msgid "Preparing the SD card"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:290
+msgid ""
+"Once you have downloaded the SD card image, we recommend obtaining a free"
+" program called `Etcher <https://etcher.io/>`__ available for all "
+"operating systems. It will burn and test any image to an SD card, saving "
+"you precious time for setting up partitions and other necessities for a "
+"Linux operating system."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:293
+msgid "Interfacing with your Pi"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:295
+msgid ""
+"Most Raspberry Pis have an HDMI or MiniHDMI port on them that you can "
+"plug into a monitor or a TV. Almost any USB keyboard will function with "
+"the Raspberry Pi as long as they do not drain too much power. Insert your"
+" SD card into the slot, then plug the monitor and keyboard in. Be sure "
+"the monitor is turned on before you plug in the USB cable to the "
+"Raspberry Pi so it can accept handshaking. After a few moments, you "
+"should be presented with a login screen."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:298
+msgid "Logging in"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:300
+msgid ""
+"Once you start the Raspberry Pi, the operating system will be unpacked "
+"and you will be presented with a login screen. The default login is as "
+"follows: username: pi password: raspberry"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:302
+msgid ""
+"once logged in, you will need to set a few things using the raspi-config "
+"utility."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:308
+msgid ""
+"The first thing to recommend is to change your password by choosing "
+"option 1. This is essential to securing your raspberry Pi device."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:310
+msgid "|Main Menu|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:448
+msgid "Main Menu"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:312
+msgid "Follow the prompts and set your new password."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:315
+msgid "Enabling & configuring Wi-fi"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:317
+msgid ""
+"Once that is changed, you should now change the Localization options, "
+"doing this sets the region you are in for interference compliant Wi-fi. "
+"Note that Wi-fi will be disabled until you select a region. Select "
+"Localization Options, and then option 4, Change Wi-fi Country"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:319
+msgid "|Rasp Local|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:449
+msgid "Rasp Local"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:321
+msgid ""
+"Now select the country you are in. You can type the first letter of the "
+"country to skip through a lot of scrolling."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:323
+msgid "|Rasp 03|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:450
+msgid "Rasp 03"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:325
+msgid ""
+"Once this is set, go into the Wi-fi configurations under Network "
+"Configuration. Here you can input the SSID and Pre-shared Key of your "
+"local network to connect."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:327
+msgid "|Rasp Wifi|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:451
+msgid "Rasp Wifi"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:329
+msgid "**Remember that PSK and SSID are case sensitive!!**"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:332
+msgid "SSH"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:334
+msgid ""
+"If you wish to work on your Raspberry Pi without having to connect a "
+"monitor and keyboard, you can enable the SSH server to use that protocol."
+" To do this, go into the Interfacing options, selection 5"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:336
+msgid "|Rasp Interface|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:452
+msgid "Rasp Interface"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:338
+msgid "Select SSH, and enable the server."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:340
+msgid ""
+"To connect to the Raspberry Pi from your local network, first boot up the"
+" machine. Then from a linux computer, or Console on a mac, or a "
+"PowerConsole like Cygwin on a windows machine, use the following command:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:346
+msgid ""
+"Where username is the name you want to login under (in our case the only "
+"user is pi), followed by the IP address of the raspberry pi. You will be "
+"prompted for a password, and then you will have logged in. It will look "
+"just the same as if you’re controlling the Raspberry Pi Directly!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:350
+msgid "You can use ifconfig to see the IP of the Raspberry Pi."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:353
+msgid "Enabling Interfaces"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:355
+msgid ""
+"As you probably saw if you setup SSH, I2C, Remote GPIO, and 1-wire "
+"interfaces can be enabled from the raspi-config utility. If you plan on "
+"using devices on those protocols, it is suggested you turn them on at "
+"this time."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:358
+msgid "Required Libraries"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:360
+msgid ""
+"Now it’s time to install the required software before setting up IoT One "
+"Cloud, luckily this is done very easily!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:362
+msgid ""
+"First, lets update the apt-get program, in case there are some new URLs "
+"and packages we need. To do this, run the following:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:369
+msgid "|Rasp Update|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:453
+msgid "Rasp Update"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:372
+msgid "Java JDK"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:374
+msgid ""
+"Next lets install Java on the Pi. We recommend using Oracle Java v8. This"
+" can be accomplished by using the following command"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:380
+msgid "|Rasp Install Java|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:454
+msgid "Rasp Install Java"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:382
+msgid "Type \"y\" to install the program and wait for apt-get to do it’s thing."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:384
+msgid ""
+"Once it’s finished, type ``java -version`` to test that it installed "
+"correctly. You should get a message like"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:393
+msgid "Pi4j"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:395
+msgid ""
+"We use some libraries from the Pi4J project to connect Java with the GPIO"
+" pins. This must be installed for any devices that plan to use a GPIO "
+"pin, like a switch or an LED."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:401
+msgid ""
+"This installs the pi4j libraries on your raspberry Pi. Once installed, "
+"you can upgrade using the following command: ``pi4j --update``"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:403
+msgid ""
+"IoT one Cloud can find this library automatically, no need to worry about"
+" installation location."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:406
+msgid "WiringPi"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:408
+msgid ""
+"IoT One Cloud uses the WiringPi numbering system which is also required "
+"to be installed onto your system in order to access GPIO pins. Some "
+"distributions have this pre-installed. To find out if it is, run the "
+"following command:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:414
+msgid "If you get an error like this:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:420
+msgid "Continue with the next steps."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:422
+msgid ""
+"Although this takes a few more steps to compile and install, it’s still "
+"fairly easy. From the command prompt, install git-core to your system:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:428
+msgid "Now use git to obtain the WiringPi source"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:434
+msgid ""
+"This will download the source into the /wiringPi folder. Once it is "
+"finished, go into that folder and verify that you have the latest "
+"version, and then compile."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:442
+msgid ""
+"Once this is done, your required libraries are setup, we recommend a "
+"reboot at this time before you begin the next steps."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:457
+msgid "Getting Started"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:460
+msgid "Installation of IoT-hub"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:462
+msgid "The latest version of IoT hub is available by using wget:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:468
+msgid ""
+"Once downloaded, extract the files. It will automatically extract to a "
+"subfolder."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:474
+msgid ""
+"The folder with the version of the hub will be named in the following "
+"format: **tigase-iot-hub-x.x-SNAPSHOT-byy** where x.x is the version, and"
+" yy is the build number. These may be important for bugs and "
+"troubleshooting."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:476
+msgid ""
+"To make things simple, and to avoid typing the version we can rename the "
+"folder using the mv command."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:482
+msgid "Navigating inside, you will see the following file list:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:490
+msgid "Selecting Java"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:492
+msgid ""
+"Since there are many builds of Java available, we have to set the path to"
+" java manually. To do this, type the following into the command line:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:498
+msgid "When you press enter, you will need to edit the following line"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:504
+msgid ""
+"And replace it with the location of java, also remove the preceding hash "
+"so it is not ignored."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:510
+msgid "Press Ctrl+X, Answer Yes, and press enter to overwrite the old name."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:513
+msgid "Starting up"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:515
+msgid "Go back up one level to the main directory"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:521
+msgid "From the main directory use the following command:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:527
+msgid ""
+"This is required to setup the associated database and if not run will "
+"result in the program being unable to run."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:529
+msgid "You should see a status report once everything is done:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:550
+msgid ""
+"Once this process is complete, you can run the hub itself with the "
+"following command:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:556
+msgid "The hub is now active and running."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:558
+msgid "Now it’s time to install and start the IoT Framework."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:561
+msgid "Devices"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:563
+msgid ""
+"This section goes over the various devices supported by IoT One Cloud. "
+"This list will grow as new drivers are added to the software. If you are "
+"unsure about some of the symbols in the individual sections, refer to the"
+" `Circuit basics <#circuits>`__ section of this guide. Some devices might"
+" require extra tools to be setup before use, refer to this section if the"
+" device calls for it."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:566
+msgid "S2C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:568
+msgid ""
+"S2C is a communications protocol than enabled serial communication "
+"through GPIO pins 3 and 5 known as the SDA and SDL pins. Some setup is "
+"required to enabled this communication."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:570
+msgid ""
+"First step is to install i2c tools, this makes detecting device addresses"
+" much easier. This can be accomplished by running the following command."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:576
+msgid ""
+"Next you will need to make sure I2C is enabled on the raspberry. To do "
+"this, run the following command:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:582
+msgid ""
+"You will presented with a menu screen. Select 5. Interfacing Options, and"
+" then P5, I2C. Enable this interface, exit and save configuration."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:585
+msgid "WiringPi Prerequsites"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:587
+msgid ""
+"I2C functionality requires WiringPi to be installed on your raspberry pi."
+" In some cases this is pre-installed. To check whether this is installed,"
+" run the following command."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:593
+msgid ""
+"If Wiring Pi installed, you will be presented with a chart similar to the"
+" following:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:624
+msgid ""
+"If you get this chart, proceed to Connecting the Sensor If you get a no "
+"such command error, proceed to installation instructions:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:627
+msgid "Installing WiringPi"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:629
+msgid ""
+"Wiring Pi requires that you install git, and then compile the code, "
+"therefore you must first install git. To do this from the command line, "
+"run the following commands. First update the pi:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:635
+msgid "Once this is finished, now install git:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:641
+msgid "Then use git to download wiringpi code:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:649
+msgid ""
+"Once this is done you can now run the gpio command and verify wiring pi "
+"is installed."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:651
+msgid "Turn off the device to plug in your sensor"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:658
+msgid "Locating a sensor"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:660
+msgid ""
+"Once you have connected an i2C device, turn on your raspberry Pi and let "
+"it boot up. Log in and run the following command"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:666
+#: ../../IoT_one_cloud_hub_documentation.rst:982
+msgid "You will presented with a map like the following:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:680
+#: ../../IoT_one_cloud_hub_documentation.rst:996
+msgid "This polls bus 1 of the i2c system, which is the one the model 3 uses."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:682
+msgid ""
+"Devices connected using i2c will be listed in this screen. In this case a"
+" device is connected at address 23."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:684
+msgid ""
+"If you do not see a connected device, it may not be getting enough power,"
+" or your wiring may not be correct. Please check and retry this step."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:687
+#: ../../IoT_one_cloud_hub_documentation.rst:1001
+msgid "Error from i2cdetect"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:689
+#: ../../IoT_one_cloud_hub_documentation.rst:1003
+msgid "If you result in this error:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:695
+#: ../../IoT_one_cloud_hub_documentation.rst:1009
+msgid ""
+"You are likely using an older model such as the model 1 and 2 and will "
+"need to check bus 0"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:702
+msgid "Connecting Multiple Devices"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:704
+msgid ""
+"Since S2C works off two pins, it is possible to connect multiple devices "
+"at different addresses. In order to do this, both devices must be powered"
+" individually, with each wire, SDA, and SCL being connected in Parallel."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:707
+msgid "1wire Devices"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:710
+msgid "DHTXX Devices"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:712
+msgid ""
+"Some devices may require the DHTXX library installed and running. To do "
+"this, follow these steps to prepare."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:714
+msgid "Get the pigpio library and install it"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:720
+msgid "Then download DHTXXD into a directory"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:728
+msgid "unzip the DHTXXD.zip file"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:734
+msgid "Compile the DHTXXD"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:740
+msgid ""
+"once done, the program DHTXXD will be available in this directory: "
+"/home/pi/DHT22/DHTXXD **Remember this, you will need to recall this for "
+"later.**"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:742
+msgid "Now connect the DHT22 as shown ![DHT22 Wiring diagram](DHT22.png)"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:745
+msgid "GPIO Library"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:747
+msgid ""
+"Before getting data from the some devices, you will need to install the "
+"PIGPIO library. To do this, run the commands"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:753
+msgid ""
+"This will install the PIGPIO library into your Raspberry Pi. Start the "
+"daemon by running"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:759
+msgid ""
+"This must be done manually at every boot, unless you enable the daemon to"
+" run at boot. This can be done by using the following command at the "
+"command line:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:765
+msgid "This will now run at every boot, now reboot your system."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:767
+msgid "``sudo reboot``"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:770
+#: ../../IoT_one_cloud_hub_documentation.rst:833
+#: ../../IoT_one_cloud_hub_documentation.rst:1027
+msgid "A Note about connections"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:772
+msgid ""
+"In some cases the DHT sensors might not receive enough power from the "
+"breakout board or ribbon cables. You may test to see if the sensor is "
+"getting power and delivering information by running the DHTXXD program "
+"directly. From the directory you compiled it in, run"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:778
+msgid ""
+"where -g## is the BCM pin 17 for the device, and you should return some "
+"data."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:784
+msgid "If you get the result"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:790
+msgid ""
+"Your device is not communicating and you may need to change how it is "
+"hooked up. You may need to bypass the ribbon cable, or use another +3.3v "
+"power source. Note that devices like DHT22 and DHT11 require 2.5mA max "
+"current to poll data."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:793
+msgid "BH1750 Ambient Light Sensor"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:796
+msgid "Details"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:798
+msgid ""
+"The BH 1750 ambient light sensor operates on the S2C protocol which much "
+"be setup before using this device. Review `this section <#s2C>`__ for "
+"setup."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:800
+msgid ""
+"While the Pi is powered down, connect the sensor like the following "
+"diagram:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:802
+msgid "|BH1750|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:891
+msgid "BH1750"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:804
+#: ../../IoT_one_cloud_hub_documentation.rst:1018
+msgid ""
+"Once you’ve connected the device and booted, now proceed to add the "
+"sensor from Light Sensor → BH1750"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:806
+msgid "|BH1750Screen|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:892
+msgid "BH1750Screen"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:808
+msgid ""
+"Note that the Address and Bus are separate entries. Be sure that you "
+"select the proper address as displayed in the graph. If you are not sure,"
+" you can run the i2i2cdetect command and see what the graph says:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:826
+msgid "In our example it is 23 on bus 1."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:828
+msgid ""
+"Once added, the client will display how many Lux the sensor is being "
+"exposed too:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:830
+msgid "|BH1750Final|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:893
+msgid "BH1750Final"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:835
+msgid ""
+"In some cases the BH1750 sensor might not receive enough power from the "
+"breakout board or ribbon cables. i2cdetect will show devices if they are "
+"receiving enough power, however if none is shown, or you get an entry of "
+"00 someplace in the matrix, your device might not have enough power to "
+"run."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:838
+msgid "Specifications"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:840
+msgid "Table 1. Specifications"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:843
+#: ../../IoT_one_cloud_hub_documentation.rst:929
+#: ../../IoT_one_cloud_hub_documentation.rst:1037
+msgid "Field"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:843
+msgid "Range"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:845
+msgid "Power"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:845
+msgid "+3v-5v DC"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:847
+msgid "Lux Sensitivity"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:847
+msgid "1 - 65535 lx"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:849
+msgid "Lux Accuracy"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:849
+msgid "+/- 20%"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:853
+msgid "Lux reference"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:855
+msgid ""
+"Here is a small chart from Wikipedia that provides some reference for the"
+" Lux unit."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:857
+msgid "Source: Wikipedia (https://en.wikipedia.org/wiki/Lux)"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:860
+msgid "Illuminance (lux)"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:860
+msgid "Surfaces illuminated by"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:862
+msgid "0.0001"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:862
+msgid "Moonless, overcast night sky (starlight)"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:864
+msgid "0.002"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:864
+msgid "Moonless clear night sky with airglow"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:866
+msgid "0.05–0.3"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:866
+msgid "Full moon on a clear night"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:868
+msgid "3.4"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:868
+msgid "Dark limit of civil twilight under a clear sky"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:870
+msgid "20–50"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:870
+msgid "Public areas with dark surroundings"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:872
+msgid "50"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:872
+msgid "Family living room lights"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:874
+msgid "80"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:874
+msgid "Office building hallway/toilet lighting"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:876
+msgid "100"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:876
+msgid "Very dark overcast day"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:878
+msgid "150"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:878
+msgid "Train station platforms"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:880
+msgid "320–500"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:880
+msgid "Office lighting"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:882
+msgid "400"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:882
+msgid "Sunrise or sunset on a clear day"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:884
+msgid "1000"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:884
+msgid "Overcast day, typical TV studio lighting"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:886
+msgid "10,000–25,000"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:886
+msgid "Full daylight (not direct sun)"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:888
+msgid "32,000–100,000"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:888
+msgid "Direct sunlight"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:896
+msgid "DHT22 & DHT11 Devices"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:898
+msgid ""
+"IoT One Cloud has support for DHT11 and DHT22 devices to be used to "
+"sample both Humidity and Temperature. Note that these devices require the"
+" DHTXX and PIGPIOD programs to be installed and running. Visit `this "
+"section <#dHTXX>`__ for details on how to setup."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:900
+msgid "Now connect the DHT22 as shown"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:902
+msgid "|DHT22 Wiring diagram|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:947
+msgid "DHT22 Wiring diagram"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:904
+msgid ""
+"Note that there is a 10k resistor between power and data lines, this is "
+"to add some current to the data line in order for it to be delivered. It "
+"may not work properly otherwise."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:906
+msgid ""
+"Before adding the device to the hub with your client, you may wish to "
+"ensure correct connections and data. To do this, visit `DHTXX Device "
+"Testing <#dHTEST>`__."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:909
+msgid "Add DHT22 to hub"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:911
+msgid ""
+"Now add the DHT22 device, either through temperature or humidity sensor "
+"screens. You will see something similar to the following:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:913
+msgid "|DHT22screen|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:948
+msgid "DHT22screen"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:915
+msgid ""
+"Note you must fill out the path to the DHT22 compiled program, as done in"
+" the example from `device setup <#dHTXX>`__. /home/pi/DHT22/DHTXXD"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:917
+msgid ""
+"Further, be sure to put the BCM pin number where data is connected. This "
+"is the number from the breakout module(BCM), not the specific GPIO pin "
+"it’s plugged into."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:919
+msgid ""
+"Once these are uploaded, you will see the temperature sensor delivering "
+"information as shown:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:921
+msgid "|DHT22Final|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:949
+msgid "DHT22Final"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:924
+msgid "DHT11 and DHT22"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:926
+msgid ""
+"Tigase IoT One Cloud is compatible with the DHT11 and DHT22 devices, they"
+" are similar and will both provide the same information however, the "
+"DHT22 provides slightly more accurate results, and allows for more "
+"frequent data transmission."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:929
+msgid "DHT11"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:929
+msgid "DHT22"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:931
+#: ../../IoT_one_cloud_hub_documentation.rst:1039
+msgid "Temp range"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:931
+msgid "0-50C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:931
+msgid "-40-80C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:933
+#: ../../IoT_one_cloud_hub_documentation.rst:1041
+msgid "Temp Accuracy"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:933
+msgid "+/- 2C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:933
+msgid "+/- .5C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:935
+msgid "Humidity range"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:935
+msgid "20-80%"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:935
+msgid "0-100%"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:937
+msgid "Humidity Accuracy"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:937
+msgid "5%"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:937
+msgid "2-5%"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:939
+msgid "Max Data Sample Rate"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:939
+msgid "1 Hz"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:939
+msgid ".5 Hz"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:943
+msgid "Temperature and Humidity"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:945
+msgid ""
+"The same sensor can be used for both Temperature and Humidity samplings, "
+"and you may setup 2 devices on the same pin to poll both."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:952
+msgid "BMP180 & BMP280 Ambient Pressure Sensors"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:954
+msgid ""
+"The BMP180 and BMP280 air pressure sensors operates on the S2C protocol "
+"which much be setup before using this device. To do this, visit `this "
+"section <#i2C>`__."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:957
+msgid "Connecting the Sensor - BMP280"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:959
+msgid ""
+"Use the following wiring diagram to connect your device. Note that SDI "
+"and SCK MUST be connected to pins 3 and 5 as I2C devices must communicate"
+" on those pins."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:961
+msgid "|BMP280 Wiring Diagram|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1061
+msgid "BMP280 Wiring Diagram"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:964
+msgid "Connecting the Sensor - BMP180"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:966
+msgid ""
+"Use the following wiring diagram to connect your device. Note that SCL "
+"and SDA MUST be connected to pins 3 and 5 as I2C devices must communicate"
+" on those pins."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:968
+msgid "|BMP180 Wiring Diagram|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1062
+msgid "BMP180 Wiring Diagram"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:972
+msgid "Detecting and working with your device"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:974
+msgid ""
+"Both the BMP180 and 280 sensors will work in a similar fashion, for "
+"either sensor, you may following the next instructions."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:976
+msgid ""
+"Turn on your raspberry Pi and let it boot up. Once you are logged in, run"
+" the following command"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:998
+msgid ""
+"Devices connected using i2c will be listed in this screen. In this case a"
+" device is connected at address 77."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1016
+msgid "Adding the Sensor"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1020
+msgid "|BMP280Screen|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1063
+msgid "BMP280Screen"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1022
+msgid ""
+"Note that the Address and Bus are separate entries. Be sure that you "
+"select the proper address as displayed in the graph. In our example it is"
+" 77 on bus 1."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1024
+msgid ""
+"Once added, the client will display the ambient air pressure in "
+"hectopascals (hPa)."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1029
+msgid ""
+"In some cases the BMP280 sensor might not receive enough power from the "
+"breakout board or ribbon cables. i2cdetect will show devices if they are "
+"receiving enough power, however if none is shown, or you get an entry of "
+"00 someplace in the matrix, your device might not have enough power to "
+"run."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1032
+msgid "BMP180 and BMP280"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1034
+msgid ""
+"Tigase IoT One Cloud is compatible with the BMP180 and BMP280 devices, "
+"they are similar and will both provide the same information however, the "
+"BMP280 provides slightly more accurate results."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1037
+msgid "BMP180"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1037
+msgid "BMP280"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1039
+msgid "-40-85C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1041
+msgid "+/- 1C"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1043
+msgid "Pressure range"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1043
+msgid "300-1100 hPa"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1045
+msgid "Pressure Accuracy"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1045
+msgid "+/- 1hPa"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1045
+msgid "+/- 0.12hPa"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1047
+msgid "Max Sampling Rate"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1047
+msgid "1Hz"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1052
+msgid "Pressure and Temperature"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1054
+msgid ""
+"The same sensor can be used for both Temperature and Pressure samplings, "
+"and you may setup 2 devices on the same pin to poll both."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1057
+msgid "Hectopascals and other units"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1059
+msgid ""
+"Hectopascals are essentially identical to Millibar in terms of "
+"atmospheric pressure, so they can be considered a 1:1 conversion ratio. "
+"If you wish to convert hectopascals to Pounds per Square Inch, or PSI "
+"multiply your number by 0.0145038."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1066
+msgid "DS1820 Temperature Sensor"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1068
+msgid ""
+"The DS1820 and DS1820B are 1-wire equipped temperature sensors. There are"
+" two common forms for the Sensor. One is a single probe with three wires,"
+" the other comes in a transistor-like form."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1070
+msgid ""
+"You can enable the 1-wire interface by using the ``sudo rasbi-config`` "
+"utility and enabling it from interfacing options."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1072
+msgid ""
+"Connecting the sensor is easy, as 1-wire will function through any GPIO "
+"pin. Note that you will need to use a 4.7kΩ resistor connected between "
+"data and Positive voltage. Further, make sure you are delivering 5v to "
+"the device or it may not function properly."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1074
+msgid "Here is the wiring diagram for the Probe type device:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1076
+msgid "|DS1820|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1144
+msgid "DS1820"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1078
+msgid "And this is for the transistor type:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1080
+msgid "|DS1820D|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1145
+msgid "DS1820D"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1082
+msgid ""
+"Note that the pins here are oriented with the FLAT side of the transistor"
+" facing you."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1085
+msgid "Testing 1-wire devices"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1087
+msgid ""
+"If you want to test to make sure the device works, run the following "
+"commands:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1094
+msgid ""
+"This will setup GPIO pin 4 for data transfer, and setup a thermometer "
+"there so make sure it’s connected like it is in the block diagrams."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1096
+msgid "Then go into the folder housing these devices:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1102
+msgid ""
+"Now, use the ``ls`` command to list devices connected to 1-wire. You "
+"should see something like this:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1108
+msgid ""
+"This shows there is an active device. If you only see 0’s for devices, "
+"like this:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1114
+msgid "The Pi cannot see your 1-wire device, check your wiring and try again!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1116
+msgid ""
+"Now go into the directory of your device, it may be unique from the one "
+"in the example."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1122
+msgid ""
+"Once in this directory, you can run ``cat w1_slave``. The sensor writes "
+"to w1_slave file, and so this command will display it, you should see "
+"some output similar to this:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1130
+msgid "Adding the Device"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1132
+msgid ""
+"Bring up your client, and tap the add new device button and select the "
+"host you are connected too."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1134
+msgid "|Select Temperature Sensor|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1146
+msgid "Select Temperature Sensor"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1136
+msgid "|Select DS1820|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1147
+msgid "Select DS1820"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1138
+msgid "|DS1820 And 03|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1148
+msgid "DS1820 And 03"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1140
+msgid ""
+"Now select the device, it should automatically select one for you if you "
+"have a single device. Select polling interval, and give it a friendly "
+"name if you wish. Tap submit and you will see the device showing you the "
+"current temperature."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1142
+msgid "|DS1820 And 04|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1149
+msgid "DS1820 And 04"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1152
+msgid "HC-SR501 Motion Detector"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1154
+msgid ""
+"The HC-SR501 Motion detector board requires no special setup to operate "
+"on Tigase IoT One Cloud, however take note that there are controls on the"
+" board."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1158
+msgid "This device requires the Pi4J and WiringPi libraries to be installed."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1160
+msgid "Here is a brief overview from the underside."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1162
+msgid "|Underside of the device|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1210
+msgid "Underside of the device"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1164
+msgid ""
+"GND: Connect to ground High/Low Output: Connect to desired pin +Power: "
+"Connect to +5v"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1166
+msgid "See the wiring diagram for a sample wiring:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1168
+msgid "|Wiring Diagram|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1211
+msgid "Wiring Diagram"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1171
+msgid "Controls:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1173
+msgid "Jumper Set:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1175
+msgid ""
+"H: Repeat Trigger In this mode, the motion detector will send a high "
+"signal whenever motion is detected, and it will reset after the time "
+"delay."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1177
+msgid ""
+"L: Single Trigger In this mode they motion detector will provide a high "
+"output signal when motion is detected, but will remain on until the "
+"device is reinitialized."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1179
+msgid "Pots:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1181
+msgid ""
+"Sensitivity Adjust Adjust this to change how far away the device will "
+"sense motion"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1183
+msgid ""
+"Time Delay Adjust Adjust how long should the sensor wait between reset "
+"between 300 and 5 seconds."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1185
+msgid ""
+"**Note that this device takes approximately one minute to initialize "
+"after applying power.**"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1187
+msgid ""
+"Be sure to select the wiringPi pin you are selecting when adding this "
+"device."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1190
+msgid "Adding the device"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1192
+msgid "Tap add a device, and select Motion Sensor from the dropdown list."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1194
+msgid "|HCSR501 01|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1212
+msgid "HCSR501 01"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1196
+msgid "For now there is only the HCSR501 device available, so select that."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1198
+msgid "|HCSR501 02|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1213
+msgid "HCSR501 02"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1200
+msgid ""
+"Now configure the WiringPi pin it’s plugged into, it’s name, and the "
+"polling interval."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1202
+msgid "|HCSR501 03|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1214
+msgid "HCSR501 03"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1204
+msgid "You now have the motion sensor setup!"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1206
+msgid "|HCSR501 04|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1215
+msgid "HCSR501 04"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1208
+msgid ""
+"It will display True or False if there is motion or not within the "
+"interval. Note that it will take some time to initialize so you may see —"
+" as it has not reported any data yet."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1218
+msgid "LED Matrix"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1220
+msgid ""
+"The LED matrix currently supported is a 8x16 LED cold cathode matrix "
+"available `at this location <https://www.waveshare.com/rpi-led-"
+"matrix.htm>`__."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1222
+msgid ""
+"This matrix uses the MAX7219 driver IC to draw each 8x8 matrix and is "
+"powered by the 5.5v and 3.3v rails from the raspberry pi. This requires a"
+" direct connection to 24 GPIO pins."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1224
+msgid "This device requires the SPI protocol to be enabled. To enable this, type"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1230
+msgid ""
+"select Interfacing Options, then SPI, and enable. Now shut down the "
+"raspberry pi and connect the matrix."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1236
+msgid ""
+"Once your pi is running, be sure to run the framework with sudo, "
+"otherwise it will not function properly with this device."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1242
+msgid ""
+"When you are up and running, now grab your smart phone and follow these "
+"steps."
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1244
+msgid "Add led matrix device in your mobile client:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1246
+msgid "|android main empty|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1268
+msgid "android main empty"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1248
+msgid "Select board where led matrix is connected:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1250
+msgid "|android select board|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1269
+msgid "android select board"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1252
+msgid "Select \"LED Matrix\" device:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1254
+msgid "|android select device|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1270
+msgid "android select device"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1256
+msgid "Tap on added device:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1258
+msgid "|android main device|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1271
+msgid "android main device"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1260
+msgid "You will see empty led matrix:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1262
+msgid "|android ledmatrix empty|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1272
+msgid "android ledmatrix empty"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1264
+msgid "Now you can draw on led matrix what you want:"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1266
+msgid "|android ledmatrix image|"
+msgstr ""
+
+#: ../../IoT_one_cloud_hub_documentation.rst:1273
+msgid "android ledmatrix image"
+msgstr ""
+
