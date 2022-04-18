@@ -282,7 +282,7 @@ If you have a device plugged into BCM 17, it also functions as WiringPi pin 0, a
 Setting Up the Raspberry Pi
 -------------------------------
 
-IoT One Cloud runs on almost any linux build, however to make things easy and have a lower footprint on memory, we are going to go with Raspbian Stretch Lite. This will require us to install some necessary software, but this is the operating system we have spent the most time working and developing with. Other guides will be made available as we expand. You can get the image of Raspbian Stretch Lite from here as a zip file.
+IoT One Cloud runs on almost any linux build, however to make things easy and have a lower footprint on memory, we are going to go with Raspbian Stretch Lite. This will require us to install some necessary software, but this is the operating system we have spent the most time working and developing with. Other guides will be made available as we expand. You can get the image of Raspbian Stretch Lite from `here <https://etcher.io/>`__ as a zip file.
 
 Preparing the SD card
 ^^^^^^^^^^^^^^^^^^^^^^^^
