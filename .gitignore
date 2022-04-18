@@ -32,5 +32,5 @@
 
 /out/
 *sphinx docuementation
-Documentation/restructured/locale/pl/LC_MESSAGES/*.mo
-Documentation/restructured/_build/
+ddocumentation/src/main/restructured/locale/pl/LC_MESSAGES/*.mo
+documentation/src/main/restructured/_build/
